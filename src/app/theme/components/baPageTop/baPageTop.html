@@ -1,17 +1,28 @@
 <div class="page-top clearfix" baScrollPosition maxHeight="50" (scrollChange)="scrolledChanged($event)"
      [ngClass]="{scrolled: isScrolled}">
-  <a routerLink="/pages/dashboard" class="al-logo clearfix"><span>ng2-</span>admin</a>
-  <a href (click)="toggleMenu()" class="collapse-menu-link ion-navicon"></a>
+  <a routerLink="/pages/principal" class="al-logo clearfix"><span>Giro </span>Esportivo</a>
+  <a href (click)="filtrarTime(atletico)" class="collapse-times-link"><img src="../assets/icon/atletico_min.png"/> </a>
+  <a href (click)="filtrarTime(goias)" class="collapse-times-link"><img src="../assets/icon/goias_min.png"/> </a>
+  <a href (click)="filtrarTime(goiania)" class="collapse-times-link"><img src="../assets/icon/goiania_min.png"/> </a>
+  <a href (click)="filtrarTime(vila_nova)" class="collapse-times-link"><img src="../assets/icon/vila_nova_min.png"/> </a>
+  <a class="profile-toggle-link dropdown-toggle" id="blog-dd" data-toggle="dropdown" aria-expanded="false">
+        Blogs
+  </a>
+  <ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="blog-dd">
+     <li class="dropdown-item"><a href>José Roberto</a></li>
+  </ul>
+  
 
   <div class="search">
     <i class="ion-ios-search-strong" ng-click="startSearch()"></i>
-    <input id="searchInput" type="text" placeholder="Search for...">
-  </div>
+    <input id="searchInput" type="text" placeholder="Buscar por...">
+    
 
+  </div>
   <div class="user-profile clearfix">
     <div class="dropdown al-user-profile">
       <a class="profile-toggle-link dropdown-toggle" id="user-profile-dd" data-toggle="dropdown" aria-expanded="false">
-        <img src="{{ ( 'Nasta' | baProfilePicture ) }}">
+        <img src="../assets/img/theme/no-photo.png">
       </a>
       <ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="user-profile-dd">
         <li class="dropdown-item"><i class="dropdown-arr"></i></li>
@@ -20,6 +31,6 @@
         <li class="dropdown-item"><a href class="signout"><i class="fa fa-power-off"></i>Sign out</a></li>
       </ul>
     </div>
-    <ba-msg-center></ba-msg-center>
+    <!--<ba-msg-center></ba-msg-center> -->
   </div>
 </div>

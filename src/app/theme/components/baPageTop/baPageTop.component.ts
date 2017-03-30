@@ -12,6 +12,7 @@ export class BaPageTop {
 
   public isScrolled:boolean = false;
   public isMenuCollapsed:boolean = false;
+  public filtroTime:string = '';
 
   constructor(private _state:GlobalState) {
     this._state.subscribe('menu.isCollapsed', (isCollapsed) => {
@@ -22,6 +23,11 @@ export class BaPageTop {
   public toggleMenu() {
     this.isMenuCollapsed = !this.isMenuCollapsed;
     this._state.notifyDataChanged('menu.isCollapsed', this.isMenuCollapsed);
+    return false;
+  }
+
+  public filtrarTime(time) {
+    this.filtroTime = time;
     return false;
   }
 

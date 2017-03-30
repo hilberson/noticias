@@ -6,7 +6,7 @@
   position: fixed;
   z-index: 904;
   box-shadow: 2px 0 3px rgba(0, 0, 0, 0.5);
-  height: 66px;
+  height: 70px;
   width: 100%;
   min-width: $resMin;
   padding: 0 32px 0 40px;
@@ -78,6 +78,26 @@ a.refresh-data {
 
   &:hover {
     color: $warning !important;
+  }
+}
+
+a.collapse-times-link{
+  font-size: 31px;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  line-height: 42px;
+  color: $sidebar-text;
+  opacity: 0.7;
+  width: 50px;
+  padding: 0;
+  float: left;
+  margin: 11px 0 0 11px;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
+    color: $warning;
   }
 }
 

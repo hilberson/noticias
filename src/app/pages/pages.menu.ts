@@ -3,6 +3,19 @@ export const PAGES_MENU = [
     path: 'pages',
     children: [
       {
+        path: 'principal', 
+        data: { 
+          menu: {
+            title: 'Página Principal', 
+            icon: 'ion-android-laptop', 
+            pathMatch: 'prefix',
+            selected: false,
+            expanded: false,
+            order: 0
+          }
+        }
+      },
+      {
         path: 'dashboard',
         data: {
           menu: {
